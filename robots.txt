@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://emreryurek.github.io/ridemre/sitemap.xml

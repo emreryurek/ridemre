@@ -1,0 +1,596 @@
+/* ========================================
+   GENEL
+======================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #111;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff6b00;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px 50px;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background-color: #111;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+/* ========================================
+   ANA SAYFA - HERO
+======================================== */
+
+.hero {
+    min-height: 75vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 50px;
+
+    background-image:
+        linear-gradient(
+            to right,
+            rgba(17, 17, 17, 1) 0%,
+            rgba(17, 17, 17, 0.95) 25%,
+            rgba(17, 17, 17, 0.55) 45%,
+            rgba(17, 17, 17, 0.15) 70%,
+            rgba(17, 17, 17, 0) 100%
+        ),
+        url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: 68% 60%;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 50px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+
+/* Hero butonu */
+
+.hero-content .btn,
+.hero-button {
+    display: inline-block;
+
+    margin-top: 20px;
+    padding: 12px 24px;
+
+    background-color: #ff6600;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.hero-content .btn:hover,
+.hero-button:hover {
+    background-color: #ff8533;
+    color: white;
+}
+
+
+/* ========================================
+   ANA SAYFA - KATEGORİLER
+======================================== */
+
+.trips {
+    padding: 40px 50px;
+}
+
+.trip-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trips h2 {
+    font-size: 36px;
+    margin: 0 0 20px;
+    text-align: center;
+}
+
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.trip-card {
+    background-color: #1c1c1c;
+
+    border-radius: 10px;
+    overflow: hidden;
+
+    transition: transform 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-5px);
+}
+
+.trip-card img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+    display: block;
+}
+
+.trip-card-content {
+    padding: 25px;
+}
+
+.trip-card h3 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.trip-card p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+.trip-card a {
+    color: #ff6b00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* ========================================
+   SAYFA BAŞLIĞI
+======================================== */
+
+.page-intro {
+    max-width: 1100px;
+
+    margin: 25px auto 10px;
+    padding: 10px 20px;
+
+    text-align: center;
+}
+
+.page-intro h2 {
+    font-size: 36px;
+    margin: 0 0 8px;
+}
+
+.page-intro p {
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.6;
+
+    color: #cccccc;
+}
+
+
+/* ========================================
+   REHBER SAYFALARI
+======================================== */
+
+.guide {
+    max-width: 900px;
+
+    margin: 40px auto 80px;
+    padding: 0 30px;
+}
+
+.guide-section {
+    max-width: 1100px;
+
+    margin: 0 auto 40px;
+    padding: 0 20px;
+}
+
+.guide-list {
+    max-width: 900px;
+
+    margin: 0 auto;
+    padding: 0 30px 80px;
+}
+
+.guide-card {
+    background-color: #1c1c1c;
+
+    border: 1px solid #292929;
+    border-radius: 14px;
+
+    padding: 40px 30px;
+    margin-bottom: 20px;
+
+    box-sizing: border-box;
+}
+
+.guide-card h3 {
+    font-size: 24px;
+    margin-bottom: 18px;
+}
+
+.guide-card p {
+    max-width: 800px;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    color: #cccccc;
+}
+
+.guide-card p + p {
+    margin-top: 15px;
+}
+
+.guide-card ul {
+    padding-left: 25px;
+    color: #cfcfcf;
+}
+
+.guide-card li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   REHBER ÜST BAŞLIK
+======================================== */
+
+.guide-intro {
+    max-width: 900px;
+
+    margin: 30px auto 0;
+    padding: 0 30px;
+}
+
+.guide-intro h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.guide-intro p {
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #cccccc;
+}
+
+
+/* ========================================
+   CHECKLIST
+======================================== */
+
+.checklist-card {
+    margin-top: 20px;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+    margin: 18px 0;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    color: #cfcfcf;
+}
+
+.check-item input {
+    width: 18px;
+    height: 18px;
+
+    cursor: pointer;
+
+    accent-color: #ff6b00;
+}
+
+
+/* ========================================
+   İLETİŞİM
+======================================== */
+
+.contact-section {
+    max-width: 1100px;
+
+    margin: 20px auto 50px;
+    padding: 0 20px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+.contact-section .guide-card {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.contact-form label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 12px;
+
+    background-color: #111;
+    color: white;
+
+    border: 1px solid #444;
+    border-radius: 6px;
+
+    font-size: 16px;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #ff6600;
+}
+
+.contact-form .btn {
+    width: fit-content;
+
+    border: none;
+    cursor: pointer;
+
+    margin-top: 10px;
+    padding: 10px 18px;
+
+    background-color: #ff6600;
+    color: white;
+
+    border-radius: 5px;
+}
+
+.contact-form .btn:hover {
+    background-color: #ff8533;
+}
+
+#formMessage {
+    margin-top: 10px;
+    color: #ff6600;
+}
+
+
+/* ========================================
+   MOBİL
+======================================== */
+
+@media (max-width: 700px) {
+
+    /* Header */
+
+    header {
+        padding: 15px 20px;
+
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header h1 {
+        margin: 0;
+        font-size: 28px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+
+    /* Ana sayfa */
+
+    .hero {
+        min-height: 70vh;
+
+        padding: 30px 20px;
+
+        background-position: 65% center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .hero-content .btn,
+    .hero-button {
+        margin-top: 15px;
+    }
+
+
+    /* Kategori kartları */
+
+    .trips {
+        padding: 40px 20px;
+    }
+
+    .trips h2 {
+        font-size: 30px;
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .trip-container {
+        max-width: 100%;
+    }
+
+    .trip-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .trip-card img {
+        height: 200px;
+    }
+
+    .trip-card-content {
+        padding: 20px;
+    }
+
+
+    /* Rehber sayfaları */
+
+    .guide {
+        padding: 0 20px;
+    }
+
+    .guide-list {
+        padding: 0 20px 50px;
+    }
+
+    .guide-section {
+        padding: 0 20px;
+    }
+
+    .guide-intro {
+        padding: 0 20px;
+        margin-top: 25px;
+    }
+
+    .guide-intro h2 {
+        font-size: 32px;
+    }
+
+    .guide-intro p {
+        font-size: 16px;
+    }
+
+    .guide-card {
+        padding: 25px 20px;
+    }
+
+    .guide-card h3 {
+        font-size: 22px;
+    }
+
+    .guide-card p {
+        font-size: 16px;
+    }
+
+    .check-item {
+        font-size: 16px;
+    }
+
+
+    /* Hakkımda */
+
+    .page-intro {
+        padding: 30px 20px 15px;
+    }
+
+    .page-intro h2 {
+        font-size: 32px;
+    }
+
+    .page-intro p {
+        font-size: 16px;
+    }
+
+
+    /* İletişim */
+
+    .contact-section {
+        grid-template-columns: 1fr;
+
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .contact-section .guide-card {
+        width: 100%;
+    }
+}

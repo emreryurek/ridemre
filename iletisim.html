@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="RideEmre ile iletişime geçin. Öneri, geri bildirim ve sorularınız için iletişim sayfasını kullanabilirsiniz.">
+    <link rel="icon" type="image/png" href="images/favicon-ridemre1.png">
+    <title>İletişim | RideEmre</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <h1>RideEmre</h1>
+        </a>
+
+        <nav>
+            <a href="index.html">Ana Sayfa</a>
+            <a href="bakim.html">Bakım</a>
+            <a href="surus-teknikleri.html">Sürüş Teknikleri</a>
+            <a href="pratik-bilgiler.html">Pratik Bilgiler</a>
+            <a href="hakkimda.html">Hakkımda</a>
+            <a href="iletisim.html">İletişim</a>
+        </nav>
+    </header>
+
+    <main>
+
+    <section class="page-intro">
+        <h2>İletişim</h2>
+
+        <p>
+            RideEmre hakkında görüş, öneri veya sorularını benimle
+            paylaşabilirsin.
+        </p>
+    </section>
+
+    <section class="contact-section">
+
+        <div class="contact-info">
+
+            <div class="guide-card">
+                <h3>Benimle İletişime Geç</h3>
+
+                <p>
+                    RideEmre projesiyle ilgili düşüncelerini, önerilerini
+                    veya geliştirilmesini istediğin konuları paylaşabilirsin.
+                </p>
+
+                <p>
+                    <strong>E-posta:</strong>
+                    <a href="mailto:ridemre1@gmail.com">
+                        ridemre1@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Instagram:</strong>
+                    <a href="https://www.instagram.com/ridemre" target="_blank">
+                        @ridemre
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="contact-form">
+
+            <div class="guide-card">
+
+                <h3>Mesaj Gönder</h3>
+
+                <form id="contactForm"
+                      action="https://formsubmit.co/ridemre1@gmail.com"
+                      method="POST">
+
+                      <input type="hidden" name="_subject" value="RideEmre İletişim Formu">
+                      <input type="hidden" name="_template" value="table">
+
+                    <label for="name">Ad Soyad</label>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Adınız ve soyadınız"
+                        required
+                    >
+
+                    <label for="email">E-posta</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="ornek@mail.com"
+                        required
+                    >
+
+                    <label for="message">Mesaj</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        placeholder="Mesajınızı yazın..."
+                        required
+                    ></textarea>
+
+                    <button type="submit" class="btn">
+                        Gönder
+                    </button>
+
+                    <p id="formMessage"></p>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
